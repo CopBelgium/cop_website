@@ -1,5 +1,6 @@
-import 'package:cop_website/home_view/home_view.dart';
 import 'package:flutter/material.dart';
+
+import 'home_screen/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
           elevation: 0,
         ),
       ),
-      home: const HomeView(),
+      home: const HomeScreen(),
     );
   }
 }

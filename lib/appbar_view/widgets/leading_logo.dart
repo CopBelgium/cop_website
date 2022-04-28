@@ -22,13 +22,14 @@ class LeadingLogo extends StatelessWidget {
           children: [
             Image.asset(
               'assets/images/cop_logo.png',
-              width: 45,
-              height: 45,
+              width: 36,
+              height: 36,
             ),
-            const SizedBox(width: kContentSpacing18),
+            const SizedBox(width: kContentSpacing12),
             AutoSizeText(
               'Church of Pentecost Belgium',
-              style: kH5.copyWith(fontWeight: FontWeight.normal, color: kBlue),
+              style:
+                  kBody.copyWith(fontWeight: FontWeight.normal, color: kBlue),
             ),
           ],
         ),

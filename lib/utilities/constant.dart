@@ -24,6 +24,7 @@ TextStyle kH3 = const TextStyle(fontSize: 48);
 TextStyle kH4 = const TextStyle(fontSize: 34);
 TextStyle kH5 = const TextStyle(fontSize: 24);
 TextStyle kBody = const TextStyle(fontSize: 18);
+TextStyle kBody2 = const TextStyle(fontSize: 16);
 TextStyle kCaption = const TextStyle(fontSize: 14);
 
 //Colors
