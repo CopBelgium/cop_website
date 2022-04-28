@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 //Other
 const kAppBarHeight = 95.0;
 const kDesktopPadding = 64.0;
+const kMobilePadding = 16.0;
 const kScreenViewHeight = 860.0;
 
 // Spacing

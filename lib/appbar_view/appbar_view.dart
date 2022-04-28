@@ -19,17 +19,24 @@ class AppBarView extends StatefulWidget {
 class _AppBarViewState extends State<AppBarView> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: kDesktopPadding),
-      height: kAppBarHeight,
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: const [
-          LeadingLogo(),
-          Spacer(),
-          NavigationActions(),
-        ],
-      ),
+    return ResponsiveBuilder(
+      builder: (context, screenInfo) {
+        return Container(
+          padding: EdgeInsets.symmetric(
+            horizontal:
+                !screenInfo.isDesktop ? kMobilePadding : kDesktopPadding,
+          ),
+          height: kAppBarHeight,
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: const [
+              LeadingLogo(),
+              Spacer(),
+              NavigationActions(),
+            ],
+          ),
+        );
+      },
     );
   }
 }
@@ -43,7 +50,9 @@ class NavigationActions extends StatelessWidget {
   Widget build(BuildContext context) {
     return ResponsiveBuilder(
       builder: (context, screenInfo) {
-        if (screenInfo.isMobile || screenInfo.isTablet) {
+        if (screenInfo.isMobile ||
+            screenInfo.isTablet ||
+            screenInfo.screenSize.width < 450) {
           return const _MobileView();
         }
 

@@ -27,6 +27,7 @@ class CustomInkwell extends StatelessWidget {
       width: width,
       child: InkWell(
         overlayColor: MaterialStateProperty.all(backgroundColor ?? kGreyMedium),
+        highlightColor: Colors.transparent,
         borderRadius: const BorderRadius.all(
           Radius.circular(kContentSpacing12),
         ),
