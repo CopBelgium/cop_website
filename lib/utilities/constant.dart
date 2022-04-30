@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 //Other
-const kAppBarHeight = 95.0;
+const kAppBarHeight = 96.0;
+const kFooterHeight = kAppBarHeight;
 const kDesktopPadding = 64.0;
 const kMobilePadding = 16.0;
 const kScreenViewHeight = 860.0;
