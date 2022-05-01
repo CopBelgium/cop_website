@@ -1,15 +1,27 @@
+class NavItem {
+  String title;
+  List<String> subMenu;
+  NavItem({
+    required this.title,
+    required this.subMenu,
+  });
+
+  @override
+  String toString() => 'NavItem(title: $title, subMenus: $subMenu)';
+}
+
 List<NavItem> navItems = [
   NavItem(
     title: 'Home',
-    subMenus: [],
+    subMenu: [],
   ),
   NavItem(
     title: 'Districts',
-    subMenus: ['Antwerp District', 'Brussels District', 'Gent District'],
+    subMenu: ['Antwerp District', 'Brussels District', 'Gent District'],
   ),
   NavItem(
     title: 'Ministries',
-    subMenus: [
+    subMenu: [
       'Pemem',
       'Evangelism ministry',
       'Women\'s ministry',
@@ -19,7 +31,7 @@ List<NavItem> navItems = [
   ),
   NavItem(
     title: 'About us',
-    subMenus: [
+    subMenu: [
       'Values',
       'Tenets',
       'Leadership',
@@ -29,18 +41,6 @@ List<NavItem> navItems = [
   ),
   NavItem(
     title: 'Contact us',
-    subMenus: [],
+    subMenu: [],
   ),
 ];
-
-class NavItem {
-  String title;
-  List<String> subMenus;
-  NavItem({
-    required this.title,
-    required this.subMenus,
-  });
-
-  @override
-  String toString() => 'NavItem(title: $title, subMenus: $subMenus)';
-}

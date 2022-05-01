@@ -24,7 +24,7 @@ class _AppBarViewDrawerState extends State<AppBarViewDrawer> {
   List<Widget> showTiles() {
     return navItems.map(
       (e) {
-        if (e.subMenus.isEmpty) {
+        if (e.subMenu.isEmpty) {
           return ListTile(
             title: Text(e.title),
             onTap: () {},
@@ -36,7 +36,7 @@ class _AppBarViewDrawerState extends State<AppBarViewDrawer> {
             textColor: kBlack,
             iconColor: kBlack,
             title: Text(e.title),
-            children: e.subMenus.map(
+            children: e.subMenu.map(
               (e) {
                 return Padding(
                   padding: const EdgeInsets.only(
